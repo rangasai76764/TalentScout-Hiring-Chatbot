@@ -1,0 +1,50 @@
+TalentScout-Hiring-Assistant/
+│── app.py                     # Main Streamlit app (frontend + UI flow)
+│── .env.example
+│── usage_guide.md
+│── __pycache__
+│── chatbot.py                 # Core chatbot logic (greeting, info gathering, exit)
+│── prompts.py                 # Centralized prompt templates (greeting, tech Qs, fallback)
+│── data_handler.py            # Candidate data storage (simulated secure storage + anonymization)
+│── requirements.txt           # Dependencies (streamlit, openai, etc.)
+│── README.md                  # Full documentation: project overview, install, usage, challenges
+│── .gitignore                 # Ignore venv, API keys, __pycache__, logs
+│── candidate_data.json        # Runtime: anonymized candidate data (not committed to Git)
+
+├── utils/                     # Helper modules (keep modular + clean)
+│   ├── context_manager.py     # Maintains conversation context
+│   ├── question_generator.py  # Generates 3–5 technical Qs per declared tech stack
+│   ├── fallback.py            # Handles unexpected inputs gracefully
+│   ├── __pycache__
+│   ├── __init__.py
+│   └── validators.py          # Validates email, phone, etc. for data quality
+
+├── deployment/                # Deployment-related files
+│   ├── Dockerfile             # For containerized deployment (bonus)
+│   ├── Procfile               # For Heroku (optional)
+│   ├── config.yaml            # Configurations for cloud (AWS/GCP)
+│   └── requirements_deploy.txt # Extra deps if deploying on cloud
+
+├── docs/                      # Documentation for requirements
+│   ├── architecture.png       # Diagram of system workflow
+│   ├── prompts.md             # Detailed prompt engineering strategy
+│   ├── data_privacy.md        # How sensitive candidate info is handled securely
+│   ├── usage_guide.md         # Step-by-step usage guide with screenshots
+│   └── report.pdf             # Final assignment report (if required)
+
+├── logs/                      # For debugging and transparency
+│   └── chatbot.log            # Logs chatbot interactions (anonymized)
+
+├── scripts/                      
+│   └── generate_report.py          
+
+└── tests/                     # Unit tests for code quality
+    ├── test_chatbot.py
+    ├── test_data_handler.py
+    ├── test_question_generator.py
+    ├── test_validators.py
+    └── __init__.py
+
+└── .github/workflows/python-app.yml
+└── .streamlit/config.toml
+└── venv

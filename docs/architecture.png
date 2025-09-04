@@ -1,0 +1,28 @@
+<!-- Save as docs/architecture.svg and open in browser or convert to PNG -->
+<svg width="900" height="420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="420" fill="#f6f8fa"/>
+  <rect x="40" y="40" width="220" height="120" fill="#ffffff" stroke="#d0d7de" rx="8"/>
+  <text x="150" y="80" font-family="sans-serif" font-size="14" fill="#0b1226" text-anchor="middle">Streamlit UI</text>
+  <text x="150" y="100" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">app.py</text>
+
+  <rect x="340" y="40" width="220" height="120" fill="#ffffff" stroke="#d0d7de" rx="8"/>
+  <text x="450" y="80" font-family="sans-serif" font-size="14" fill="#0b1226" text-anchor="middle">Chatbot Logic</text>
+  <text x="450" y="100" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">chatbot.py, prompts.py</text>
+
+  <rect x="640" y="40" width="220" height="120" fill="#ffffff" stroke="#d0d7de" rx="8"/>
+  <text x="750" y="80" font-family="sans-serif" font-size="14" fill="#0b1226" text-anchor="middle">Utils & Storage</text>
+  <text x="750" y="100" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">utils/, data_handler.py</text>
+
+  <line x1="260" y1="100" x2="340" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="560" y1="100" x2="640" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <text x="450" y="180" font-family="sans-serif" font-size="12" fill="#475569" text-anchor="middle">
+    Optional: Integrate LLM (OpenAI) for enhanced question generation
+  </text>
+</svg>
